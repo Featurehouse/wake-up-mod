@@ -13,6 +13,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.dimension.DimensionType;
 import org.featurehouse.mcmod.wakeup.SleepManager;
 import org.featurehouse.mcmod.wakeup.SleepSkipableWorld;
+import org.objectweb.asm.Opcodes;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -59,7 +60,8 @@ abstract class ServerWorldMixin extends World implements SleepSkipableWorld {
     }
 
     @Inject(method = "tick",
-    at = @At(value = "FIELD", target = "net.minecraft.server.world.ServerWorld.allPlayersSleeping:Z"))
+    at = @At(value = "FIELD", target = "net.minecraft.server.world.ServerWorld.allPlayersSleeping:Z",
+             opcode = Opcodes.GETFIELD))
     private void tickSleepManager(BooleanSupplier shouldKeepTicking, CallbackInfo ci) {
         // 663: aload_0 // this
         // 664: getfield allplayersSleeping:Z
