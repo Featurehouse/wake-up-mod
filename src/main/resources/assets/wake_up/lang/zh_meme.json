@@ -1,0 +1,7 @@
+{
+  "gamerule.wake_up.players_sleeping_percentage": "阻止修仙占比",
+  "gamerule.wake_up.players_sleeping_percentage.description": "使全体玩家不能修仙所需玩家的占比",
+  "wake_up.sleep.not_possible": "目前的人数不足以让所有玩家停止修仙行为",
+  "wake_up.sleep.players_sleeping": "%s/%s名玩家正在阻止修仙行为",
+  "wake_up.sleep.skipping_night": "昏睡红茶真好喝……"
+}

@@ -1,0 +1,7 @@
+{
+  "gamerule.wake_up.players_sleeping_percentage": "睡眠比例",
+  "gamerule.wake_up.players_sleeping_percentage.description": "跳過夜晚所需的入睡玩家比例。",
+  "wake_up.sleep.not_possible": "入睡的玩家數目不足以跳過這個夜晚",
+  "wake_up.sleep.players_sleeping": "%s/%s 的玩家正在睡覺",
+  "wake_up.sleep.skipping_night": "正在睡夢中度過今晚"
+}

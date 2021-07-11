@@ -1,0 +1,8 @@
+{
+  "gamerule.wake_up.players_sleeping_percentage": "Sleep percentage",
+  "gamerule.wake_up.players_sleeping_percentage.description": "The percentage of players who must be sleeping to skip the night.",
+
+  "wake_up.sleep.not_possible": "No amount of rest can pass this night",
+  "wake_up.sleep.players_sleeping": "%s/%s players sleeping",
+  "wake_up.sleep.skipping_night": "Sleeping through this night"
+}

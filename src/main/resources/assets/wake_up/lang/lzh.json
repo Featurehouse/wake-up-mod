@@ -1,0 +1,7 @@
+{
+  "gamerule.wake_up.players_sleeping_percentage": "寐者之比",
+  "gamerule.wake_up.players_sleeping_percentage.description": "逾茲夜所需寐者之比。",
+  "wake_up.sleep.not_possible": "寐之遊者數不足逾今夕",
+  "wake_up.sleep.players_sleeping": "遊者就寢：%2$s之%1$s",
+  "wake_up.sleep.skipping_night": "寐度今宵"
+}

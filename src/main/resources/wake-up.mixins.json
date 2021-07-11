@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "org.featurehouse.mcmod.wakeup.mixin",
+  "compatibilityLevel": "JAVA_8",
+
+  "server": [
+    "ServerWorldMixin",
+    "ServerPlayerEntityMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
