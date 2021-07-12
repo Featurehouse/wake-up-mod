@@ -13,6 +13,7 @@
     "sources": "https://github.com/Featurehouse/wake-up-mod"
   },
 
+  "icon": "assets/wake_up/icon.png",
   "license": "Apache-2.0",
 
   "environment": "server",

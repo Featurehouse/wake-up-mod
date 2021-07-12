@@ -5,12 +5,8 @@ import net.fabricmc.api.Environment;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.text.TranslatableText;
-import net.minecraft.util.profiler.Profiler;
-import net.minecraft.util.registry.RegistryKey;
 import net.minecraft.world.GameRules;
-import net.minecraft.world.MutableWorldProperties;
 import net.minecraft.world.World;
-import net.minecraft.world.dimension.DimensionType;
 import org.featurehouse.mcmod.wakeup.SleepManager;
 import org.featurehouse.mcmod.wakeup.SleepSkipableWorld;
 import org.objectweb.asm.Opcodes;
@@ -23,7 +19,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import java.util.List;
 import java.util.function.BooleanSupplier;
-import java.util.function.Supplier;
 
 @Mixin(ServerWorld.class)
 @Environment(EnvType.SERVER)
@@ -97,8 +92,8 @@ abstract class ServerWorldMixin extends World implements SleepSkipableWorld {
         return this.getGameRules().getInt(SleepManager.RULE) <= 100;
     }
 
-    @Deprecated
-    private ServerWorldMixin(MutableWorldProperties properties, RegistryKey<World> registryRef, DimensionType dimensionType, Supplier<Profiler> profiler, boolean isClient, boolean debugWorld, long seed) {
-        super(properties, registryRef, dimensionType, profiler, isClient, debugWorld, seed);
+    @Deprecated @SuppressWarnings("all")
+    private ServerWorldMixin() {
+        super(null, null, null, null, false, false, 0L);
     }
 }

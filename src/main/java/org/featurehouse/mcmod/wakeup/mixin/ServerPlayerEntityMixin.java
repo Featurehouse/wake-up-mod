@@ -1,6 +1,5 @@
 package org.featurehouse.mcmod.wakeup.mixin;
 
-import com.mojang.authlib.GameProfile;
 import com.mojang.datafixers.util.Either;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -11,7 +10,6 @@ import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Unit;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
 import org.featurehouse.mcmod.wakeup.SleepSkipableWorld;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -35,8 +33,8 @@ abstract class ServerPlayerEntityMixin extends PlayerEntity {
 
     // --*-- --*-- --*-- //
 
-    @Deprecated
-    private ServerPlayerEntityMixin(World world, BlockPos pos, float yaw, GameProfile profile) {
-        super(world, pos, yaw, profile);
+    @Deprecated @SuppressWarnings("all")
+    private ServerPlayerEntityMixin() {
+        super(null, null, 0.0F, null);
     }
 }

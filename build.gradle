@@ -30,7 +30,7 @@ dependencies {
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	//modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-	modImplementation "net.fabricmc.fabric-api:fabric-game-rule-api-v1:${project.gamerule_api}"
+	include modImplementation ("net.fabricmc.fabric-api:fabric-game-rule-api-v1:${project.gamerule_api}")
 
 	// PSA: Some older mods, compiled on Loom 0.2.1, might have outdated Maven POMs.
 	// You may need to force-disable transitiveness on them.
@@ -75,6 +75,9 @@ task createResourcePack(type: Zip, dependsOn: processResources) {
 	}
 	from ('pack.json') {
 		rename { "pack.mcmeta" }
+	}
+	from ('src/main/resources/assets/wake_up/icon.png') {
+		rename { 'pack.png' }
 	}
 	archiveName "wake-up-langpack-${project.version}.zip"
 }
