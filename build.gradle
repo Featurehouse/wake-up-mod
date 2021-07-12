@@ -72,6 +72,7 @@ task createResourcePack(type: Zip, dependsOn: processResources) {
 	from ('src/main/resources') {
 		exclude 'fabric.mod.json'
 		exclude 'wake-up.mixins.json'
+		exclude 'assets/wake_up/icon.png'
 	}
 	from ('pack.json') {
 		rename { "pack.mcmeta" }
